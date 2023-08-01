@@ -8,6 +8,7 @@
 public class Primitives
 {
     // There are 8 primitive data types in Java:
+    // (there are no unsigned numeric types)
     
     // NUMERIC PRIMITIVES
     // byte - 8-bit signed integer (-128 to 127)
@@ -16,6 +17,12 @@ public class Primitives
     // long - 64-bit signed integer (really big)
     // float - 32-bit floating-point (~ -3.4*10^38 to 3.4*10^38 + 7 digits)
     // double - 64-bit floating-point (really huge + 15 digits)
+    
+    // OTHER PRIMITIVES
+    // char - single 16-bit Unicode character (\u0000 to \uffff - 65,535 values)
+    // boolean - true or false, represents 1 bit
+    
+    // Everything else in Java is represented by objects
     
     
 }
