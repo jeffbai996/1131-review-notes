@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.text.*;
 
 /**
  * Write a description of class Objects here.
@@ -65,5 +66,39 @@ public class Objects
         System.out.println(Math.abs(negative)); // 15
         double frac = 3 / 4;
         System.out.println(Math.acos(frac)); // 1.57...
+        
+        // Formatting Output (java.text)
+        // NumberFormat (java.text.NumberFormat)
+        // Formats numbers as a specific type (like currency/percent on Excel)
+        
+        final double TAX_RATE = 0.06; // 6% sales tax
+        int quantity = 5;
+        double subtotal, tax, totalCost, unitPrice;
+        
+        NumberFormat fmt1 = NumberFormat.getCurrencyInstance();
+        NumberFormat fmt2 = NumberFormat.getPercentInstance();
+        
+        unitPrice = 9.9;
+        subtotal = quantity * unitPrice;
+        tax = subtotal * TAX_RATE;
+        totalCost = subtotal + tax;
+
+        System.out.println("Subtotal: " + fmt1.format(subtotal));
+        System.out.println("Tax: " + fmt1.format(tax) + " at " + fmt2.format(TAX_RATE));
+        System.out.println("Total: " + fmt1.format(totalCost));
+        
+        // DecimalFormat 
+        // Must instantiate a DecimalFormat object
+        // Can format a decimal according to a pattern
+        
+        int radius = 1;
+        double area, circumference;
+        
+        area = Math.PI * Math.pow(radius, 2);
+        circumference = 2 * Math.PI * radius;
+        
+        DecimalFormat dfmt = new DecimalFormat("0.###"); // only 3 trailing decimals allowed
+        
+        System.out.println("Area : " + dfmt.format(area) + ", Circumference: " + dfmt.format(circumference));
     }
 }
