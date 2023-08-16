@@ -7,27 +7,14 @@
  */
 public class Inheritance
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Inheritance
-     */
-    public Inheritance()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    // Inheritance
+    // A class is a blueprint to an object
+    // A class establishes characteristics and behaviors of an object
+    // But reserves no memory space for variables, unless they're declared
+    // as static.
+    
+    // The existing class is the parent class, or superclass
+    // The derived class is the child class.
+    
+    
 }
